@@ -21,7 +21,7 @@ public class EventLogger
         }
         catch (InvalidCastException exc)
         {
-            System.Windows.Forms.MessageBox.Show("Parameter error: " + exc.Message, "MyEventHandler");
+            new BaseException("Message", MessageLevel.FatalError).FixMessage();
         }
 
         return 0;
@@ -38,7 +38,7 @@ public class EventLogger
         }
         catch (InvalidCastException exc)
         {
-            System.Windows.Forms.MessageBox.Show("Parameter error: " + exc.Message, "MyEventHandler");
+            new BaseException("Message", MessageLevel.FatalError).FixMessage();
         }
     }
 
