@@ -15,7 +15,6 @@ public class EventLogger
         {
             EventParameterString oEventParameterString = new EventParameterString(iEventParameter);
             string strActionName = oEventParameterString.String;
-
             // Registrar el evento en el archivo
             LogEvent(strActionName);           
         }
@@ -26,7 +25,6 @@ public class EventLogger
 
         return 0;
     }
-
     private void LogEvent(string actionName)
     {
         try
